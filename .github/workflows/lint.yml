@@ -5,18 +5,18 @@ on:
   push:
 
 
-  job:
-    lint:
-      name: Lint
-      runs-on: ubuntu-latest
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
 
-      steps:
-        - uses: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
 
-        - uses: action/setup-node@v3
-          with:
-            node-version: 20
+      - uses: action/setup-node@v3
+        with:
+          node-version: 20
 
-        - run: npm install
+      - run: npm install
 
-        - run: npm run lint
+      - run: npm run lint
